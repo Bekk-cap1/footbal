@@ -1,0 +1,158 @@
+.header {
+    background: url(https://futsal.uz/img/istafl/header-background-oct2023.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 10rem;
+
+    &__background {
+        img {
+            width: 100%;
+            height: calc(15vw - 1rem);
+            object-fit: cover;
+        }
+    }
+
+    &__menu {
+        background: rgba(var(--color-bg-color-menu), 0.34);
+        border-bottom: 0.3rem solid rgba(var(--color-bg-hover));
+
+        .container {
+            ul {
+                padding-left: 0;
+                margin: 0;
+                display: flex;
+                justify-content: center;
+                list-style: none;
+
+                li {
+                    transform: skewX(-15deg);
+                    padding: 0.7rem 1.7rem;
+                    transition: 0.3s ease-in-out all;
+                    border-left: 0.15rem solid rgba(var(--color-bg-color-menu), .45);
+                    z-index: 2;
+                    &:nth-child(6) {
+                        border-right: 0.15rem solid rgba(var(--color-bg-color-menu), .45);
+                    }
+                    &:nth-child(2) {
+                        &:hover{
+                            ul{
+                                width: 55rem;
+                            }
+                        }
+                    }
+                    &:nth-child(3) {
+                        &:hover{
+                            ul{
+                                width: 20rem;
+                            }
+                        }
+                    }
+
+                    ul {
+                        display: none;
+                        h4 {
+                            transform: skewX(-15deg);
+                            background-color: rgba(var(--color-bg-color-menu-active));
+                            padding: 1rem 2rem;
+                            width: 60%;
+                            margin: 0.5rem auto;
+                            color: rgb(var(--white-color));
+                            font-size: 1.3rem;
+
+                            span {
+                                display: inline-block;
+                                transform: skewX(15deg);
+                            }
+                        }
+
+                        li {
+                            color: rgb(var(--white-color));
+                        }
+                    }
+
+                    &:hover {
+                        transition: 0.3s ease-in-out all;
+                        cursor: pointer;
+                        background-color: rgba(var(--color-bg-color-menu), .7);
+
+                        ul {
+                            display: block;
+                            position: absolute;
+                            top: 100%;
+                            border-radius: 0.5rem;
+                            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+                            transform: skewX(15deg);
+                            background-color: rgba(var(--color-bg-color-menu));
+                            width: 18rem;
+                            li {
+                                border-left: none;
+
+                                &:hover {
+                                    background-color: rgb(var(--color-bg-color-menu-active));
+                                }
+
+                                padding: 1.5rem 2rem;
+                                transform: skewX(0deg);
+                                text-transform: uppercase;
+                            }
+
+                            .zal-slavi {
+                                span {
+                                    &:hover {
+                                        background-color: rgb(var(--color-bg-color-menu-active));
+                                    }
+
+                                    border: 0.1rem solid rgba(var(--white-color));
+                                    padding: 0.5rem 4rem;
+                                }
+                            }
+
+                            div {
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                font-size: 1.5rem;
+                                color: rgb(var(--white-color));
+                                background-color: rgba(var(--color-bg-color-menu-active), .6);
+                                border-radius: 0 0 0.5rem 0.5rem;
+                                height: 3.7rem;
+                                cursor: auto;
+                                h5 {
+                                    transform: skewX(-15deg);
+                                    padding: 1rem 3rem;
+                                    border-right: 0.15rem solid rgba(var(--white-color), .7);
+                                    text-transform: capitalize;
+                                    cursor: pointer;
+
+                                    &:nth-child(3) {
+                                        border-right: none;
+                                    }
+
+                                    &:hover {
+                                        background-color: rgb(var(--color-bg-color-menu-active), .6);
+                                    }
+
+                                    span {
+                                        display: inline-block;
+                                        transform: skewX(15deg);
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    a {
+                        text-decoration: none;
+                        color: rgb(var(--white-color));
+                        font-size: 1.5rem;
+
+                        span {
+                            display: inline-block;
+                            transform: skewX(15deg);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
