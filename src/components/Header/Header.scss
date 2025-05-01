@@ -2,21 +2,17 @@
     background: url(https://futsal.uz/img/istafl/header-background-oct2023.png);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     padding-top: 10rem;
-
-    &__background {
-        img {
-            width: 100%;
-            height: calc(15vw - 1rem);
-            object-fit: cover;
-        }
-    }
 
     &__menu {
         background: rgba(var(--color-bg-color-menu), 0.34);
         border-bottom: 0.3rem solid rgba(var(--color-bg-hover));
 
         .container {
+            width: 1440px;
+            margin: 0 auto;
+
             ul {
                 padding-left: 0;
                 margin: 0;
@@ -26,23 +22,26 @@
 
                 li {
                     transform: skewX(-15deg);
-                    padding: 0.7rem 1.7rem;
+                    padding: 0.7rem 3.5rem;
                     transition: 0.3s ease-in-out all;
                     border-left: 0.15rem solid rgba(var(--color-bg-color-menu), .45);
                     z-index: 2;
+
                     &:nth-child(6) {
                         border-right: 0.15rem solid rgba(var(--color-bg-color-menu), .45);
                     }
+
                     &:nth-child(2) {
-                        &:hover{
-                            ul{
+                        &:hover {
+                            ul {
                                 width: 55rem;
                             }
                         }
                     }
+
                     &:nth-child(3) {
-                        &:hover{
-                            ul{
+                        &:hover {
+                            ul {
                                 width: 20rem;
                             }
                         }
@@ -50,6 +49,7 @@
 
                     ul {
                         display: none;
+
                         h4 {
                             transform: skewX(-15deg);
                             background-color: rgba(var(--color-bg-color-menu-active));
@@ -84,6 +84,7 @@
                             transform: skewX(15deg);
                             background-color: rgba(var(--color-bg-color-menu));
                             width: 18rem;
+
                             li {
                                 border-left: none;
 
@@ -97,6 +98,7 @@
                             }
 
                             .zal-slavi {
+                                transition: 0.3s ease-in-out all;
                                 span {
                                     &:hover {
                                         background-color: rgb(var(--color-bg-color-menu-active));
@@ -117,6 +119,7 @@
                                 border-radius: 0 0 0.5rem 0.5rem;
                                 height: 3.7rem;
                                 cursor: auto;
+
                                 h5 {
                                     transform: skewX(-15deg);
                                     padding: 1rem 3rem;
@@ -149,6 +152,288 @@
                         span {
                             display: inline-block;
                             transform: skewX(15deg);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .header {
+
+        &__menu {
+            .container {
+                width: 100%;
+
+                ul {
+                    li {
+                        padding: 0.5rem 1.5rem;
+                        font-size: 1rem;
+
+                        &:nth-child(2) {
+                            &:hover {
+                                ul {
+                                    width: 35rem;
+                                    h4{
+                                        padding: 0.5rem;
+                                    }
+                                    div{
+                                        h5{
+                                            font-size: 1rem;
+                                            padding: 0.5rem 1rem;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        
+                        &:nth-child(3) {
+                            &:hover {
+                                ul {
+                                    width: 15rem;
+                                    .zal-slavi{
+                                        span{
+                                            padding: 0.5rem 2rem;
+                                            width: 100%;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        &:hover{
+                            ul{
+                                width: 8rem;
+                                li{
+                                    padding: 0.5rem 1rem;
+                                }
+                            }
+                        }
+
+                        ul {
+                            width: 100%;
+
+                            li {
+                                padding: 1.5rem 1rem;
+                            }
+                        }
+
+                        a {
+                            font-size: 1.2rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .header {
+        &__menu {
+            .container {
+                width: 100%;
+                ul {
+                    width: 100%;
+                    align-items: center;
+                    li {
+                        padding: 0.5rem 1rem;
+                        font-size: 0.8rem;
+                        &:hover{
+                            ul{
+                                width: 100%;
+                                li{
+                                    padding: 0.5rem;
+                                }
+                            }
+                        }
+                        &:nth-child(2) {
+                            &:hover {
+                                ul {
+                                    width: 350%;
+                                    h4{
+                                        padding: 0.5rem;
+                                        font-size: 0.8rem;
+                                    }
+                                    div{
+                                        h5{
+                                            font-size: 0.8rem;
+                                            padding: 0.5rem 1rem;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        &:nth-child(3) {
+                            &:hover {
+                                ul {
+                                    width: 100%;
+                                    .zal-slavi{
+                                        span{
+                                            padding: 0.2rem 0.3rem;
+                                            width: 100%;
+                                        }
+                                        margin-bottom: 0.5rem;
+                                    }
+                                }
+                            }
+                        }
+
+                        ul {
+                            width: 100%;
+
+                            li {
+                                padding: 1.5rem 1rem;
+                            }
+                        }
+
+                        a {
+                            font-size: 1.2rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .header {
+        &__menu {
+            .container {
+                width: 100%;
+                ul {
+                    width: 100%;
+                    align-items: center;
+                    li {
+                        padding: 0.5rem;
+                        &:hover{
+                            ul{
+                                width: auto;
+                                li{
+                                    padding: 0.2rem;
+                                }
+                            }
+                        }
+                        &:nth-child(2) {
+                            &:hover {
+                                ul {
+                                    width: 350%;
+                                    h4{
+                                        padding: 0.5rem;
+                                        font-size: 0.8rem;
+                                    }
+                                    div{
+                                        h5{
+                                            font-size: 0.8rem;
+                                            padding: 0.5rem 1rem;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        &:nth-child(3) {
+                            &:hover {
+                                ul {
+                                    width: auto;
+                                    .zal-slavi{
+                                        span{
+                                            padding: 0.2rem 0.3rem;
+                                            width: 100%;
+                                        }
+                                        margin-bottom: 0.5rem;
+                                    }
+                                }
+                            }
+                        }
+
+                        ul {
+                            width: 100%;
+
+                            li {
+                                padding: 1.5rem 1rem;
+                            }
+                        }
+
+                        a {
+                            font-size: 1rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 480px) {
+    .header {
+        &__menu {
+            .container {
+                width: 100%;
+                ul {
+                    width: 100%;
+                    align-items: center;
+                    li {
+                        padding: 0.5rem;
+                        &:hover{
+                            ul{
+                                width: auto;
+                                li{
+                                    padding: 0.2rem;
+                                    font-size: 0.7rem;
+                                }
+                            }
+                        }
+                        &:nth-child(2) {
+                            &:hover {
+                                ul {
+                                    width: 450%;
+                                    h4{
+                                        padding: 0.5rem;
+                                        font-size: 0.7rem;
+                                    }
+                                    div{
+                                        h5{
+                                            font-size: 0.7rem;
+                                            padding: 0.5rem 1rem;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        &:nth-child(3) {
+                            &:hover {
+                                ul {
+                                    width: 120%;
+                                    li{
+                                        font-size: 0.6rem;
+                                    }
+                                    .zal-slavi{
+                                        span{
+                                            padding: 0.2rem 0.3rem;
+                                            width: 100%;
+                                        }
+                                        margin-bottom: 0.5rem;
+                                    }
+                                }
+                            }
+                        }
+
+                        ul {
+                            width: 100%;
+
+                            li {
+                                padding: 1.5rem 1rem;
+                            }
+                        }
+
+                        a {
+                            font-size: 0.7rem;
                         }
                     }
                 }

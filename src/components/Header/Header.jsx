@@ -1,8 +1,9 @@
 import React from 'react';
 import './Header.scss';
+import { useNavigate } from 'react-router-dom';
 
 function Header() {
-
+    const navigate = useNavigate();
       
     return (
         <header className="header">
@@ -38,7 +39,7 @@ function Header() {
                             <ul>
                                 <li>команды</li>
                                 <li>игроки</li>
-                                <li>судьи</li>
+                                <li onClick={()=> navigate("/referee")}>судьи</li>
                                 <li>тренеры</li>
                                 <li>трансферы</li>
                                 <li className='zal-slavi'><span>зал славы</span></li>
