@@ -39,8 +39,8 @@ function Header() {
                             <ul>
                                 <li>команды</li>
                                 <li>игроки</li>
-                                <li onClick={()=> navigate("/referee")}>судьи</li>
-                                <li>тренеры</li>
+                                <li onClick={()=> navigate("/participants/referee")}>судьи</li>
+                                <li onClick={()=>navigate("/participants/coach-list")}>тренеры</li>
                                 <li>трансферы</li>
                                 <li className='zal-slavi'><span>зал славы</span></li>
                             </ul>

@@ -378,13 +378,13 @@
                     width: 100%;
                     align-items: center;
                     li {
-                        padding: 0.5rem;
+                        padding: 0.5rem 0.2rem;
                         &:hover{
                             ul{
                                 width: auto;
                                 li{
                                     padding: 0.2rem;
-                                    font-size: 0.7rem;
+                                    font-size: 0.5rem;
                                 }
                             }
                         }
@@ -396,10 +396,14 @@
                                         padding: 0.5rem;
                                         font-size: 0.7rem;
                                     }
+                                    li{
+                                        padding: 0.5rem;
+                                    }
                                     div{
+                                        height: 2rem;
                                         h5{
-                                            font-size: 0.7rem;
-                                            padding: 0.5rem 1rem;
+                                            font-size: 0.6rem;
+                                            padding: 0.5rem 0.5rem;
                                         }
                                     }
                                 }

@@ -6,6 +6,7 @@ import Footer from './components/Footer/Footer'
 import Referee from './pages/Referee'
 import NotFound from './pages/NotFound'
 import { Route, Routes } from 'react-router-dom'
+import Coach__list from './pages/Coach__list'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -17,7 +18,8 @@ function App() {
         <Routes>
           <Route path='*' element={<NotFound />} />
           <Route path='/' element={<Home/>} />
-          <Route path='/referee' element={<Referee />} />
+          <Route path='/participants/referee' element={<Referee />} />
+          <Route path='/participants/coach-list' element={<Coach__list />} />
 
         </Routes>
         <Footer />

@@ -1,0 +1,378 @@
+.coach {
+
+    &__inner {
+        &__title {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 0.2rem;
+
+            h1 {
+                text-transform: uppercase;
+            }
+
+            ul {
+                flex-direction: row;
+                margin-left: 1rem;
+            }
+
+            div {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: row;
+                h4{
+                    margin-left: 1rem;
+                }
+            }
+        }
+    }
+
+
+    &__middle {
+        background: url(https://st.joinsport.io/hdbk/brand/12/image/5d0a2b206313d_display.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+
+        &__inner {
+            width: 1232px;
+            margin: 0 auto;
+            padding: 0;
+            background: rgb(var(--color-bg));
+            padding: 1rem 1rem;
+
+            &__header {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: rgba(var(--color-bg-color-menu-active));
+                border-radius: 0.2rem;
+
+                h2 {
+                    padding: 0.7rem 8rem;
+                    color: rgb(var(--white-color));
+                    text-transform: uppercase;
+                    font-size: 1.3rem;
+                    transform: skewX(-15deg);
+                    cursor: pointer;
+
+                    span {
+                        display: block;
+                        transform: skewX(15deg);
+                    }
+
+                    &:hover {
+                        background: rgba(var(--color-bg-color-menu));
+                    }
+                }
+
+                .hover {
+                    background: rgba(var(--color-bg-hover));
+                }
+            }
+
+            &__main {
+                margin-top: 1rem;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                form {
+                    width: 60%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    input {
+                        width: 75%;
+                        height: 3rem;
+                        border: none;
+                        outline: none;
+                        font-size: 1.2rem;
+                        padding-left: 1rem;
+                        background: rgb(var(--white-color));
+                    }
+
+                    button {
+                        background: rgb(var(--color-bg-color-menu));
+                        color: rgb(var(--white-color));
+                        width: 20%;
+                        margin-left: 0.3rem;
+                        text-transform: uppercase;
+                        padding: 0.8rem 2rem;
+                        border-radius: 0.2rem;
+                        cursor: pointer;
+                    }
+                }
+
+                span {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    cursor: pointer;
+                    color: rgb(var(--color-gray));
+
+                    p {
+                        margin-left: 0.5rem;
+                    }
+                }
+            }
+
+            &__table {
+                .name {
+                    font-size: 1.5rem;
+                }
+
+                td,
+                th {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 1200px) {
+    .coach {
+        &__inner {
+            &__title {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                border-radius: 0.2rem;
+
+                h1 {
+                    text-transform: uppercase;
+                    margin-bottom: 0.5rem;
+                }
+
+                ul {
+                    margin-bottom: 0.5rem;
+                    margin-left: 0;
+                }
+                div{
+                    select{
+                        font-size: 1.1rem;
+                    }
+                }
+            }
+        }
+
+        &__middle {
+            &__inner {
+                width: 100%;
+                padding: 1rem 1rem;
+
+                &__header {
+
+                    h2 {
+                        padding: 0.7rem 2rem;
+                    }
+
+                    .hover {
+                        background: rgba(var(--color-bg-hover));
+                    }
+                }
+
+                &__main {
+                    form {
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        input {}
+
+                        button {}
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .coach {
+        &__inner {
+            &__title {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                border-radius: 0.2rem;
+
+                h1 {
+                    text-transform: uppercase;
+                    margin-bottom: 0.5rem;
+                }
+
+                ul {
+                    flex-direction: row;
+                    margin-bottom: 0.5rem;
+                    margin-left: 0;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    li{
+                        padding: 1rem 1.5rem ;
+                    }
+                }
+
+                div {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: row;
+                    h4 {
+                        margin: 0;
+                    }
+                }
+            }
+        }
+
+        &__middle {
+            &__inner {
+                width: 100%;
+                padding: 1rem 1rem;
+
+                &__header {
+
+                    h2 {
+                        padding: 0.7rem 2rem;
+                        font-size: 1.2rem;
+                    }
+                }
+
+                &__main {
+                    form {
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        input {
+                            height: 2rem;
+                        }
+
+                        button {
+                            padding: 0.27rem 1.5rem;
+                            font-size: 1rem;
+                        }
+                    }
+                }
+
+                &__table {
+
+                    .name,
+                    td,
+                    th {
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+    .coach {
+        &__inner {
+            &__title {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                border-radius: 0.2rem;
+
+                h1 {
+                    text-transform: uppercase;
+                    margin-bottom: 0.5rem;
+                }
+
+                ul {
+                    flex-direction: row;
+                    margin-bottom: 0.5rem;
+                    li{
+                        font-size: 0.8rem;
+                        padding: 0.6rem 1rem ;
+                    }
+                }
+
+                div {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    width: 70%;
+                    h4 {
+                        margin: 0;
+                        padding: 0.5rem 1rem;
+                        margin-bottom: 0.5rem;
+                        width: 100%;
+                    }
+                    select{
+                        width: 100%;
+                        padding: 0.6rem 1rem;
+                    }
+                }
+            }
+        }
+
+        &__middle {
+            &__inner {
+                width: 100%;
+                padding: 1rem 1rem;
+
+                &__header {
+
+                    h2 {
+                        padding: 0.7rem 2rem;
+                        font-size: 1rem;
+                    }
+                }
+
+                &__main {
+                    form {
+                        width: 70%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        input {
+
+                            height: 2rem;
+                            font-size: 0.8rem;
+                        }
+
+                        button {
+                            padding: 0.27rem .5rem;
+                            font-size: 0.8rem;
+                        }
+                    }
+
+                    span {
+                        p {
+                            font-size: 0.7rem;
+
+                        }
+                    }
+                }
+
+                &__table {
+
+                    .name,
+                    td,
+                    th {
+                        font-size: 0.9rem;
+                    }
+                }
+            }
+        }
+    }
+
+}

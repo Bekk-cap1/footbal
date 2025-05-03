@@ -1,23 +1,20 @@
-import React, { useEffect, useState } from 'react';
-import './Referee.scss';
-import { useLocation } from 'react-router-dom';
-import Participants from './Participants';
+import React, { useEffect, useState } from 'react'
 
-function Referee() {
+import './Coach__list.scss'
+import Participants from './Participants'
+
+function Coach__list() {
     const [all, setAll] = useState(1);
     const [refereeData, setRefereeData] = useState([]);
 
     const handleClick = (id) => {
-        // Convert id to number to ensure consistent comparison
         const numericId = parseInt(id, 10);
         setAll((prev) => (prev === numericId ? 0 : numericId));
     };
-    const local = useLocation()
-
 
     const fetchData = async () => {
         try {
-            const coatchList = await fetch('http://apiv2.uzllf.uz/api/v1/home/referee_list/');
+            const coatchList = await fetch('http://apiv2.uzllf.uz/api/v1/home/coach_list/');
             if (!coatchList.ok) {
                 throw new Error('Ошибка сети при загрузке матчей');
             }
@@ -52,17 +49,18 @@ function Referee() {
         fetchData();
     }, []);
 
+
     return (
         <>
             <Participants />
-            <div className="referee w-full">
-                <div className='referee__middle'>
-                    <div className='referee__middle__inner'>
-                        <div className='referee__middle__inner__header'>
+            <div className="coach w-full">
+                <div className='coach__middle'>
+                    <div className='coach__middle__inner'>
+                        <div className='coach__middle__inner__header'>
                             <h2 className={all === 1 ? "hover" : ""} id='1' onClick={() => handleClick('1')}><span>Все</span></h2>
                             <h2 className={all === 2 ? "hover" : ""} id='2' onClick={() => handleClick('2')}><span>2025</span></h2>
                         </div>
-                        <div className="referee__middle__inner__main">
+                        <div className="coach__middle__inner__main">
                             <form action="#" onSubmit={searchReferee}>
                                 <input type="text" placeholder="Поиск по ФИО" name="searchValue" required />
                                 <button type="submit">найти</button>
@@ -72,7 +70,7 @@ function Referee() {
                                 <p>Сбросить фильтры</p>
                             </span>
                         </div>
-                        <div className="referee__middle__inner__table">
+                        <div className="coach__middle__inner__table">
                             {refereeData.length === 0 ? (
                                 <p className="text-center mt-4">Ничего не найдено</p>
                             ) : (
@@ -80,7 +78,7 @@ function Referee() {
                                     <thead className='border-b-2'>
                                         <tr>
                                             <th>№</th>
-                                            <th className='justify-start items-start'>Судья</th>
+                                            <th className='justify-start items-start'>Тренеры</th>
                                             <th>И</th>
                                             <th>ЖК</th>
                                             <th>СР</th>
@@ -108,7 +106,7 @@ function Referee() {
                 </div>
             </div>
         </>
-    );
+    )
 }
 
-export default Referee;
+export default Coach__list
