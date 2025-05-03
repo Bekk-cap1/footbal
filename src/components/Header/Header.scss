@@ -244,7 +244,7 @@
                         font-size: 0.8rem;
                         &:hover{
                             ul{
-                                width: 100%;
+                                width: 150%;
                                 li{
                                     padding: 0.5rem;
                                 }
@@ -313,7 +313,6 @@
                         padding: 0.5rem;
                         &:hover{
                             ul{
-                                width: auto;
                                 li{
                                     padding: 0.2rem;
                                 }
@@ -379,6 +378,13 @@
                     align-items: center;
                     li {
                         padding: 0.5rem 0.2rem;
+                        ul {
+                            width: 250%;
+    
+                            li {
+                                padding: 1.5rem 1rem;
+                            }
+                        }
                         &:hover{
                             ul{
                                 width: auto;
@@ -428,13 +434,6 @@
                             }
                         }
 
-                        ul {
-                            width: 100%;
-
-                            li {
-                                padding: 1.5rem 1rem;
-                            }
-                        }
 
                         a {
                             font-size: 0.7rem;
