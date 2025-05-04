@@ -18,9 +18,7 @@ function Coach__list() {
             if (!coatchList.ok) {
                 throw new Error('Ошибка сети при загрузке матчей');
             }
-
             const data = await coatchList.json();
-            coatchList.status(200).json(data);
             setRefereeData(data);
         } catch (error) {
             console.error('Произошла ошибка:', error);
