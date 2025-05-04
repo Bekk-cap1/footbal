@@ -36,7 +36,7 @@ function Home() {
   useEffect(() => {
     async function fetchData() {
       try {
-        const matchResponse = await fetch('http://apiv2.uzllf.uz/api/v1/home/last10matches/');
+        const matchResponse = await fetch('https://apiv2.uzllf.uz/api/v1/home/last10matches/');
 
         if (!matchResponse.ok) {
           throw new Error('Ошибка сети при загрузке матчей');
@@ -45,14 +45,14 @@ function Home() {
         console.log(matchData);
         setEndMatchData(matchData);
 
-        const leagueResponse = await fetch('http://apiv2.uzllf.uz/api/v1/home/leaguelist/');
+        const leagueResponse = await fetch('https://apiv2.uzllf.uz/api/v1/home/leaguelist/');
         if (!leagueResponse.ok) {
           throw new Error('Ошибка сети при загрузке лиг');
         }
         const leagueData = await leagueResponse.json();
         setBannerData(leagueData);
 
-        const allNewsResponse = await fetch('http://apiv2.uzllf.uz/api/v1/news/allnews/');
+        const allNewsResponse = await fetch('https://apiv2.uzllf.uz/api/v1/news/allnews/');
         if (!allNewsResponse.ok) {
           throw new Error('Ошибка сети при загрузке лиг');
         }

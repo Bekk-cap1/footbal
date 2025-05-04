@@ -14,7 +14,7 @@ function Coach__list() {
 
     const fetchData = async () => {
         try {
-            const coatchList = await fetch('http://apiv2.uzllf.uz/api/v1/home/coach_list/');
+            const coatchList = await fetch('https://apiv2.uzllf.uz/api/v1/home/coach_list/');
             if (!coatchList.ok) {
                 throw new Error('Ошибка сети при загрузке матчей');
             }

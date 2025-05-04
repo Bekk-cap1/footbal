@@ -10,7 +10,7 @@ function Footer() {
     useEffect(() => {
         async function fetchData() {
             try {
-                const response = await fetch('http://apiv2.uzllf.uz/api/v1/news/socials/');
+                const response = await fetch('https://apiv2.uzllf.uz/api/v1/news/socials/');
                 if (!response.ok) {
                     throw new Error('Ошибка сети при загрузке данных');
                 }
