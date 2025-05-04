@@ -21,7 +21,7 @@ const lapDetails = {
 };
 
 function Home() {
-  const {activeId, setActiveId} = useContext(Context);
+  const { activeId, setActiveId } = useContext(Context);
   const [endMatchData, setEndMatchData] = useState([])
   const [bannerData, setBannerData] = useState([])
   const [loading, setLoading] = useState(true);
@@ -41,6 +41,9 @@ function Home() {
         if (!matchResponse.ok) {
           throw new Error('Ошибка сети при загрузке матчей');
         }
+        const matchResponseData = await matchResponse.json();
+        matchResponse.status(200).json(matchResponseData);
+
         const matchData = await matchResponse.json();
         console.log(matchData);
         setEndMatchData(matchData);
@@ -49,6 +52,9 @@ function Home() {
         if (!leagueResponse.ok) {
           throw new Error('Ошибка сети при загрузке лиг');
         }
+        const leagueResponseData = await leagueResponse.json();
+        leagueResponse.status(200).json(leagueResponseData);
+
         const leagueData = await leagueResponse.json();
         setBannerData(leagueData);
 
@@ -56,6 +62,9 @@ function Home() {
         if (!allNewsResponse.ok) {
           throw new Error('Ошибка сети при загрузке лиг');
         }
+        const allNewsResponseData = await allNewsResponse.json();
+        allNewsResponse.status(200).json(allNewsResponseData);
+
         const allNewsData = await allNewsResponse.json();
         setAllNews(allNewsData);
         console.log(allNewsData);
@@ -105,7 +114,7 @@ function Home() {
     const minutes = date.getMinutes().toString().padStart(2, '0');
     return `${day} ${month} ${hours}:${minutes} ${weekday}`;
   };
-  
+
 
 
   return (
@@ -266,24 +275,24 @@ function Home() {
                 {
                   allNews?.map((e) => (
                     <>
-                    <div className='flex'>
-                      <div key={`${e.id}-1`}>
-                        <img src={e.photo} alt="" />
-                        <li>
-                          <h4>{formatDate(e.updated_at)}</h4>
-                          <h3>{e.title}</h3>
-                          <p>{e.body}</p>
-                        </li>
+                      <div className='flex'>
+                        <div key={`${e.id}-1`}>
+                          <img src={e.photo} alt="" />
+                          <li>
+                            <h4>{formatDate(e.updated_at)}</h4>
+                            <h3>{e.title}</h3>
+                            <p>{e.body}</p>
+                          </li>
+                        </div>
+                        <div key={`${e.id}-2`}>
+                          <img src={e.photo} alt="" />
+                          <li>
+                            <h4>{formatDate(e.updated_at)}</h4>
+                            <h3>{e.title}</h3>
+                            <p>{e.body}</p>
+                          </li>
+                        </div>
                       </div>
-                      <div key={`${e.id}-2`}>
-                        <img src={e.photo} alt="" />
-                        <li>
-                          <h4>{formatDate(e.updated_at)}</h4>
-                          <h3>{e.title}</h3>
-                          <p>{e.body}</p>
-                        </li>
-                      </div>
-                    </div>
                     </>
                   ))
                 }
@@ -322,7 +331,7 @@ function Home() {
                         </ul>
                       </div>
                     ))
-                  }
+                }
               </div>
             </div>
           </div>
