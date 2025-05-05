@@ -153,6 +153,7 @@ function Home() {
                 navigation={{ prevEl: '.swiper-button-prev-custom', nextEl: '.swiper-button-next-custom' }}
                 slidesPerView={5}
                 breakpoints={{
+                  280: {slidesPerView: 1},
                   640: { slidesPerView: 2 },
                   768: { slidesPerView: 3 },
                   1024: { slidesPerView: 5 },
