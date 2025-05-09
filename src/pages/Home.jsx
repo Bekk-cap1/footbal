@@ -107,6 +107,9 @@ function Home() {
   };
   
 
+  console.log(endMatchData);
+  
+
 
   return (
     <div className='home'>
@@ -201,13 +204,13 @@ function Home() {
                         {e.team1?.name && e.team2?.name && (
                           <p className="match__score">
                             <img
-                              src="https://st.joinsport.io/team/1355115/logo/65c2032887966_100x100.jpg"
-                              alt=""
+                              src={e.team1.icon_url}
+                              alt="team1"
                             />
                             {e.team1_goals} : {e.team2_goals}
                             <img
-                              src="https://st.joinsport.io/team/1355115/logo/65c2032887966_100x100.jpg"
-                              alt=""
+                              src={e.team2.icon_url}
+                              alt="team2"
                             />
                           </p>
                         )}
